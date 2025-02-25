@@ -21,9 +21,9 @@ const moscow = btns[3];
 const tashkent = btns[4];
 
 const paragraphChanger = (city) => {
-    tab_content_paragraph.innerHTML = `<b>${city}</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, quibusdam saepe natus numquam dolorum aliquam ducimus molestias tenetur? Quaerat, atque blanditiis. Debitis voluptatem sequi quibusdam nihil eveniet obcaecati soluta rem.
+    tab_content_paragraph.innerHTML = `<b>${city}</b> A picture may be worth a thousand words, but our food speaks for itself! Dive into a collection of stunning dishes that celebrate flavor, texture, and passion on every plate.
     <br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt aspernatur earum sequi consequatur, quasi iste quod nam esse adipisci neque commodi voluptate deserunt architecto rerum. Blanditiis labore sed sapiente.`
+    `
 }
 
 const remove_class = () => {
