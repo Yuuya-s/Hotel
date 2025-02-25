@@ -21,9 +21,9 @@ const moscow = btns[3];
 const tashkent = btns[4];
 
 const paragraphChanger = (city) => {
-    tab_content_paragraph.innerHTML = `<b>${city}</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, quibusdam saepe natus numquam dolorum aliquam ducimus molestias tenetur? Quaerat, atque blanditiis. Debitis voluptatem sequi quibusdam nihil eveniet obcaecati soluta rem.
-    <br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt aspernatur earum sequi consequatur, quasi iste quod nam esse adipisci neque commodi voluptate deserunt architecto rerum. Blanditiis labore sed sapiente.`
+    tab_content_paragraph.innerHTML = `<b>${city}</b>Warning: This gallery may cause extreme hunger! Feast your eyes on our drool-worthy dishes, bursting with flavors that will make your cravings unstoppable. Who’s ready to dig in?'
+
+
 }
 
 const remove_class = () => {
