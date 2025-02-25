@@ -95,7 +95,7 @@ const foodImgs = [
 const changeGalleryItems = (currentCount) => {
     galleryCurrent.textContent = currentCount + 1;
     galleryTotal.textContent = foodNames.length;
-    galleryImg.src = `${foodImgs[currentCount]}`;
+    galleryImg.src ='${foodImgs[currentCount]}`;
     galleryName.textContent = `${foodNames[currentCount]}`;
     galleryDescription.innerHTML = `${foodDescription[currentCount]}`;
 }
