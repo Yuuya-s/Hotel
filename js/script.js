@@ -14,43 +14,70 @@ const galleryImg = document.querySelector('#offer__slide_img');
 const galleryName = document.querySelector('.offer__slide_name');
 const galleryDescription = document.querySelector('.offer__slide_p');
 
-// Tab Switching
+const paris = btns[0];
+const london = btns[1];
+const dubai = btns[2];
+const moscow = btns[3];
+const tashkent = btns[4];
+
 const paragraphChanger = (city) => {
-    tab_content_paragraph.innerHTML = `<b>${city}</b> Warning: This gallery may cause extreme hunger! Feast your eyes on our drool-worthy dishes, bursting with flavors that will make your cravings unstoppable. Who’s ready to dig in?`;
-};
+    tab_content_paragraph.innerHTML = `<b>${city}</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, quibusdam saepe natus numquam dolorum aliquam ducimus molestias tenetur? Quaerat, atque blanditiis. Debitis voluptatem sequi quibusdam nihil eveniet obcaecati soluta rem.
+    <br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt aspernatur earum sequi consequatur, quasi iste quod nam esse adipisci neque commodi voluptate deserunt architecto rerum. Blanditiis labore sed sapiente.`
+}
 
 const remove_class = () => {
     btns.forEach(btn => btn.classList.remove('tabheader__item_active'));
-};
+}
 
-btns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        remove_class();
-        btn.classList.add('tabheader__item_active');
-
-        const cities = ['Paris', 'London', 'Dubai', 'Moscow', 'Tashkent'];
-        const images = ['./img/paris.png', './img/london.png', './img/dubai.png', './img/moscow.png', './img/tashkent.png'];
-
-        paragraphChanger(cities[index]);
-        tab_content_img.src = images[index];
-    });
+paris.addEventListener('click', () => {
+    remove_class();
+    paris.classList.add('tabheader__item_active');
+    paragraphChanger('Paris');
+    tab_content_img.src = "./img/paris.png";
 });
 
-// Gallery Items
+london.addEventListener('click', () => {
+    remove_class();
+    london.classList.add('tabheader__item_active');
+    paragraphChanger('London');
+    tab_content_img.src = "./img/london.png";
+});
+
+dubai.addEventListener('click', () => {
+    remove_class();
+    dubai.classList.add('tabheader__item_active');
+    paragraphChanger('Dubai');
+    tab_content_img.src = "./img/dubai.png";
+});
+
+moscow.addEventListener('click', () => {
+    remove_class();
+    moscow.classList.add('tabheader__item_active');
+    paragraphChanger('Moscow');
+    tab_content_img.src = "./img/moscow.png";
+});
+
+tashkent.addEventListener('click', () => {
+    remove_class();
+    tashkent.classList.add('tabheader__item_active');
+    paragraphChanger('Tashkent');
+    tab_content_img.src = "./img/tashkent.png";
+});
+
+// Gallery Items //
 let currentCount = 0;
 const foodNames = [
-    'Fun & Playful',
-    'A Global Feast',
-    'Sweet Temptations',
-    'Fresh & Wholesome',
-    'Our Food Gallery 5',
+   ' A Global Feast',
+   'Sweet Temptations',
+   'A Taste of Tradition',
+   'Flavours of the world',
+   'A Culinary Adventure'
 ];
 const foodDescription = [
-    'A celebration of fine dining awaits! Experience the elegance of gastronomy with our handpicked selection of beautifully crafted dishes. Every bite is a journey of taste and creativity.',
-    'Step into a world of flavors! From sizzling street food to gourmet delights, our collection takes you on a journey across cultures. Discover the magic of global cuisine, one delicious bite at a time.',
-    'Got a sweet tooth? This gallery is dedicated to irresistible desserts and heavenly treats. From delicate pastries to rich, chocolatey delights, every bite is pure indulgence.',
-    'Healthy can be delicious! Dive into a gallery of fresh, vibrant, and nourishing meals crafted with the finest ingredients. From colorful salads to hearty bowls, enjoy food that makes you feel good inside and out.',
-    'Experience the artistry of our chefs! This gallery showcases signature dishes, each carefully designed to surprise and delight. Creative, bold, and full of flavor—every plate is a masterpiece!',
+' A celebration of fine dining awaits! Experience the elegance of gastronomy with our handpicked selection of beautifully crafted dishes. Every bite is a journey of taste and creativity.',
+'Warning: This gallery may cause extreme hunger! Feast your eyes on our drool-worthy dishes, bursting with flavors that will make your cravings unstoppable. Who’s ready to dig in?',
+'Food brings people together, and our gallery is proof! Explore a world of rich flavors, fresh ingredients, and heartwarming meals made with love. Every dish tells a story—what’s yours?'
 ];
 const foodImgs = [
     './img/gallery1.jpeg',
@@ -66,22 +93,25 @@ const changeGalleryItems = (currentCount) => {
     galleryImg.src = `${foodImgs[currentCount]}`;
     galleryName.textContent = `${foodNames[currentCount]}`;
     galleryDescription.innerHTML = `${foodDescription[currentCount]}`;
-};
+}
 
 galleryCurrent.textContent = currentCount + 1;
 galleryTotal.textContent = foodNames.length;
-
 galleryNextBtn.addEventListener('click', () => {
     currentCount = (currentCount + 1) % foodImgs.length;
     changeGalleryItems(currentCount);
 });
 
 galleryPrevBtn.addEventListener('click', () => {
-    currentCount = (currentCount - 1 + foodImgs.length) % foodImgs.length;
+    currentCount = (currentCount - 1) % foodImgs.length;
+    if (currentCount < 0) {
+        currentCount = 4;
+    }
     changeGalleryItems(currentCount);
 });
 
-// Countdown Timer
+// Control Contact Time \\
+
 function getDayOfYearFromMonthAndDay(month, day) {
     const start = new Date(new Date().getFullYear(), 0, 0);
     const date = new Date(new Date().getFullYear(), month - 1, day);
@@ -99,15 +129,14 @@ function getTodayDayOfYear() {
 function startCountdown() {
     setInterval(() => {
         const now = new Date();
-        const dayNumber = getDayOfYearFromMonthAndDay(5, 12); // May 12th
-        let daysLeft = dayNumber - getTodayDayOfYear();
-
-        if (daysLeft < 0) daysLeft += 365; // Adjust for past date
+        const dayNumber = getDayOfYearFromMonthAndDay(5, 12); // may, 12 => 13-may
+        const daysLeft = dayNumber - getTodayDayOfYear();
 
         contact_Seconds.textContent = 59 - now.getSeconds();
         contact_Minutes.textContent = 59 - now.getMinutes();
         contact_Hours.textContent = 23 - now.getHours();
         contact_Days.textContent = daysLeft;
+
     }, 1000);
 }
 
