@@ -68,18 +68,21 @@ tashkent.addEventListener('click', () => {
 // Gallery Items //
 let currentCount = 0;
 const foodNames = [
-    'Our Food Gallery 1',
-    'Our Food Gallery 2',
-    'Our Food Gallery 3',
-    'Our Food Gallery 4',
+    'Fun & Playful',
+    'A Global Feast',
+    'Sweet Temptations',
+    'Fresh & Wholesome',
     'Our Food Gallery 5'
 ];
 const foodDescription = [
-    `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat? <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat?`,
-    `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat? <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat?`,
-    `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat? <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat?`,
-    `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat? <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat?`,
-    `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat? <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae obcaecati ea maxime esse suscipit at veritatis corporis, est dicta repellat cupiditate. Cupiditate corrupti illum, necessitatibus saepe non ab placeat fugiat?`
+    'A celebration of fine dining awaits! Experience the elegance of gastronomy with our handpicked selection of beautifully crafted dishes. Every bite is a journey of taste and creativity.',
+    `Step into a world of flavors! From sizzling street food to gourmet delights, our collection takes you on a journey across cultures. Discover the magic of global cuisine, one delicious bite at a time.',
+    `Got a sweet tooth? This gallery is dedicated to irresistible desserts and heavenly treats. From delicate pastries to rich, chocolatey delights, every bite is pure indulgence.',
+
+
+    `Healthy can be delicious! Dive into a gallery of fresh, vibrant, and nourishing meals crafted with the finest ingredients. From colorful salads to hearty bowls, enjoy food that makes you feel good inside and out.',
+    `Experience the artistry of our chefs! This gallery showcases signature dishes, each carefully designed to surprise and delight. Creative, bold, and full of flavor—every plate is a masterpiece!'
+    
 ];
 const foodImgs = [
     './img/gallery1.jpeg',
