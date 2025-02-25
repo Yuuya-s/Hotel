@@ -1,0 +1,128 @@
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #000; /* Black background */
+  }
+  
+  /* Box styling */
+  .box {
+    position: relative;
+    width: 400px; /* Initial width */
+    height: 200px; /* Initial height */
+    background: #111; /* Black box */
+    filter: drop-shadow(0 15px 50px #000);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+  
+  /* Adjust dimensions dynamically on hover */
+  .box:hover {
+    width: 600px; /* Increased width to match height */
+    height: 600px; /* Matches the increased width */
+  }
+  
+  /* Hidden form styles */
+  .loginBx {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+  }
+  
+  /* Show the form on hover */
+  .box:hover .loginBx {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  /* Login/Sign-up container styling */
+  .login {
+    position: absolute;
+    inset: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #222; /* Darker black for the login form background */
+    color: #fff;
+    z-index: 1000;
+    box-shadow: inset 0 10px 20px #00000080;
+    border-bottom: 2px solid #ffffff80;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  
+  /* Form container styling */
+  .loginBx {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    padding: 20px;
+  }
+  
+  /* Input fields and buttons */
+  input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #fff;
+    background: #333; /* Slightly lighter black for inputs */
+    border: 2px solid #fff;
+    border-radius: 30px;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  input::placeholder {
+    color: #999;
+  }
+  
+  input:focus {
+    border-color: #45f3ff;
+    background-color: #444; /* Light black focus background */
+  }
+  
+  input[type="submit"] {
+    background: #45f3ff;
+    border: none;
+    font-weight: 500;
+    color: #111;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  input[type="submit"]:hover {
+    box-shadow: 0 0 10px #45f3ff, 0 0 60px #45f3ff;
+  }
+  
+  /* Links */
+  .group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .group a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .group a:hover {
+    color: #ff2770;
+    font-weight: bold;
+  }
+  
